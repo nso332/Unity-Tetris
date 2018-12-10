@@ -8,19 +8,14 @@ public class ShapeSpawner : MonoBehaviour {
 
     public void SpawnShape()
     {
-        int shapeIndex = Random.Range(0, 6);
+        //randomly selects out of the 7 shapes
+        int shapeIndex = Random.Range(0, 7);
 
         Instantiate(shapes[shapeIndex], transform.position, Quaternion.identity);
         // shape index between 0-6, transform positoin is the position of the shape spawner, quaternion handles rotation
     }
-
 	// Use this for initialization
 	void Start () {
         SpawnShape();
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
 	}
 }
